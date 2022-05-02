@@ -44,13 +44,13 @@ def setup_proj(projectname, projectdir):
         if venv_needed.lower() == 'y':
             venv_name = input('Name of virtual environment (if blank it will be "venv"): ')
             if venv_name:
-                os.popen(f'python -m venv {venv_name}')
+                os.system(f'python -m venv {venv_name}')
             else:
-                os.popen('python -m venv venv')
+                os.system('python -m venv venv')
     
     opennow = input('Do you want to open your new project now?(yN): ')
     if opennow.lower() == 'y':
-        os.popen(f'code {projdir}')
+        os.system(f'code {projdir}')
     else:
         print('Okay then. Have a good one.')
         sys.exit(0)
